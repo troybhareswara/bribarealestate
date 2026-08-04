@@ -194,7 +194,15 @@ a {
 
 .hero-logo {
   max-width: 400px;
+  width: 100%;
+  height: auto;
   margin-bottom: 2rem;
+}
+
+.navbar-logo img,
+.nav-logo {
+  max-width: 150px;
+  height: auto;
 }
 
 .hero-tagline {
