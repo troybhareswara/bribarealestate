@@ -18,6 +18,9 @@
 </head>
 <body>
 
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- Navigation -->
   <nav id="navbar" role="navigation" aria-label="Main navigation">
     <a href="#hero" class="nav-logo-link" aria-label="PT Briba Real Estate - Home">
@@ -62,6 +65,9 @@
     <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
   </nav>
 
+  <!-- Main Content -->
+  <main id="main-content">
+
   <!-- Hero -->
   <header id="hero">
     <div class="hero-bg">
@@ -76,7 +82,7 @@
       <div class="hero-logo-text" aria-hidden="true"><img src="images/cleanB.png" alt="Briba Logo"></div>
       <h1>Briba Real Estate</h1>
       <p class="hero-sub">Since 2023</p>
-      <a href="#villas" class="btn">Explore Villas</a>
+      <a href="#hero" class="btn" aria-label="Explore our villas">Explore Villas</a>
     </div>
     <div class="hero-scroll-indicator" aria-hidden="true">
       <span>Scroll</span>
@@ -92,7 +98,7 @@
       <h2>Our Story</h2>
       <p class="fade-in">
         We are a mixed Indonesian family business, and our three beautiful villas in the heart of Bali have been welcoming guests for over 20 years.
-        Two years ago, we completed a beautiful renovation — blending modern comfort with the soul of traditional Balinese architecture.
+        in 2023, we completed a beautiful renovation — blending modern comfort with the soul of traditional Balinese architecture.
         Today, our vintage villas are available for daily rental through Airbnb, and we couldn't be more excited to share this piece of paradise with you.
       </p>
       <p class="fade-in">
@@ -145,7 +151,7 @@
         <article class="villa-card villa-card-image fade-in">
           <div class="villa-image">
             <img
-              src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=800&q=80"
+              src="images/IMG_0982-Pano.JPG"
               alt="Villa Vintage Berawa 3 - Private pool retreat"
               loading="lazy">
             <div class="villa-image-overlay">
@@ -165,76 +171,109 @@
 
   <!-- Services -->
   <section id="services">
-    <div class="container">
-      <h2>Guest Services</h2>
-      <div class="services-grid">
-
-        <div class="service-item fade-in">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>
-          </svg>
-          <span>Airport Pickup</span>
+    <div class="services-wrapper">
+      <div class="container">
+        <div class="services-header fade-in">
+          <h2>Guest Services</h2>
+          <div class="section-divider"></div>
+          <p class="services-intro">Everything you need for a perfect stay, thoughtfully arranged.</p>
         </div>
 
-        <div class="service-item fade-in">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="5" cy="17" r="3"/>
-            <circle cx="19" cy="17" r="3"/>
-            <path d="M8.5 17H5.5L3 11h7l-1 6h3.5"/>
-            <path d="M14 4h4l3 3h2"/>
-          </svg>
-          <span>Motorcycle Rental</span>
-        </div>
+        <div class="services-grid fade-in">
+          <div class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>
+              </svg>
+            </div>
+            <h3>Airport Pickup</h3>
+            <p>Start your Bali journey stress-free with our complimentary transfer service</p>
+          </div>
 
-        <div class="service-item fade-in">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="3" y="8" width="18" height="4" rx="1"/>
-            <path d="M12 8v13"/>
-            <path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/>
-            <path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/>
-          </svg>
-          <span>Birthday Decoration</span>
-        </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="5" cy="17" r="3"/>
+                <circle cx="19" cy="17" r="3"/>
+                <path d="M12 17V7l4 4"/>
+                <path d="M8 17h4"/>
+                <path d="M7 7h8l2-3H9l-2 3"/>
+                <path d="M12 7v4"/>
+              </svg>
+            </div>
+            <h3>Motorcycle Rental</h3>
+            <p>Explore Canggu and beyond at your own pace with our reliable scooters</p>
+          </div>
 
-        <div class="service-item fade-in">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
-            <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
-            <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
-          </svg>
-          <span>Pool Decoration</span>
-        </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="8" width="18" height="14" rx="2"/>
+                <path d="M12 8v14"/>
+                <path d="M3 12h18"/>
+                <path d="M8 8V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v3"/>
+                <path d="M9 12a3 3 0 0 0 6 0"/>
+              </svg>
+            </div>
+            <h3>Birthday Decoration</h3>
+            <p>Celebrate special moments with personalized decorations and setups</p>
+          </div>
 
-        <div class="service-item fade-in">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M4 18V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12"/>
-            <path d="M2 18h20"/>
-            <path d="M10 14v4"/>
-            <path d="M14 14v4"/>
-            <path d="M7 6V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v2"/>
-          </svg>
-          <span>Baby Cot Available</span>
-        </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="6" width="18" height="14" rx="2"/>
+                <path d="M3 10h18"/>
+                <path d="M7 6v4"/>
+                <path d="M12 6v4"/>
+                <path d="M17 6v4"/>
+                <path d="M7 14c0 1.5 2.5 3 5 3s5-1.5 5-3"/>
+                <path d="M7 17c0 1.5 2.5 3 5 3s5-1.5 5-3"/>
+              </svg>
+            </div>
+            <h3>Pool Decoration</h3>
+            <p>Transform your pool area into a tropical paradise for relaxation</p>
+          </div>
 
-        <div class="service-item fade-in">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M2 4v16"/>
-            <path d="M2 8h18a2 2 0 0 1 2 2v10"/>
-            <path d="M2 17h20"/>
-            <path d="M6 8v9"/>
-          </svg>
-          <span>Extra Beds</span>
-        </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/>
+                <line x1="10" x2="8" y1="5" y2="7"/>
+                <line x1="2" x2="22" y1="12" y2="12"/>
+                <line x1="7" x2="7" y1="19" y2="21"/>
+                <line x1="17" x2="17" y1="19" y2="21"/>
+              </svg>
+            </div>
+            <h3>Baby Cot Available</h3>
+            <p>Traveling with little ones? We provide comfortable sleeping arrangements</p>
+          </div>
 
-        <div class="service-item fade-in">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-            <path d="M12 17h.01"/>
-          </svg>
-          <span>Just Ask!</span>
-        </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 4v16"/>
+                <path d="M2 8h18a2 2 0 0 1 2 2v10"/>
+                <path d="M2 17h20"/>
+                <path d="M6 8v9"/>
+              </svg>
+            </div>
+            <h3>Extra Beds</h3>
+            <p>Additional bedding for larger groups or extra comfort</p>
+          </div>
 
+          <div class="service-card service-card-highlight">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                <path d="M12 17h.01"/>
+              </svg>
+            </div>
+            <h3>Just Ask!</h3>
+            <p>Need something specific? We're here to make your stay perfect</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -269,53 +308,155 @@
 
   <!-- Contact -->
   <section id="contact">
-    <div class="container">
-      <h2>Get in Touch</h2>
-      <p class="contact-intro fade-in">We'd love to hear from you. Reach out anytime — we're happy to help with bookings, questions, or special requests.</p>
-      <div class="contact-grid fade-in">
+    <div class="contact-wrapper">
+      <div class="container">
+        <div class="contact-header fade-in">
+          <h2>Get in Touch</h2>
+          <div class="section-divider"></div>
+          <p class="contact-intro">We'd love to hear from you. Reach out anytime — we're happy to help with bookings, questions, or special requests.</p>
+        </div>
 
-        <a href="https://wa.me/6285337835809" class="contact-item" target="_blank" rel="noopener">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-          </svg>
-          <div>
-            <span>WhatsApp</span>
-            <span>+62 853 3783 5809</span>
-          </div>
-        </a>
+        <div class="contact-grid fade-in">
+          <a href="https://wa.me/6285337835809" class="contact-card" target="_blank" rel="noopener" aria-label="Chat on WhatsApp: +62 853 3783 5809">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">WhatsApp</span>
+              <span class="contact-value">+62 853 3783 5809</span>
+            </div>
+            <div class="contact-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </a>
 
-        <a href="mailto:Bribarealestate@gmail.com" class="contact-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="2" y="4" width="20" height="16" rx="2"/>
-            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-          </svg>
-          <div>
-            <span>Email</span>
-            <span>Bribarealestate@gmail.com</span>
-          </div>
-        </a>
+          <a href="mailto:Bribarealestate@gmail.com" class="contact-card" aria-label="Send email to Bribarealestate@gmail.com">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">Bribarealestate@gmail.com</span>
+            </div>
+            <div class="contact-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </a>
 
-        <a href="https://instagram.com/bribarealestate" class="contact-item" target="_blank" rel="noopener">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-          </svg>
-          <div>
-            <span>Instagram</span>
-            <span>@bribarealestate</span>
-          </div>
-        </a>
-
+          <a href="https://instagram.com/bribarealestate" class="contact-card" target="_blank" rel="noopener" aria-label="Follow us on Instagram @bribarealestate">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">Instagram</span>
+              <span class="contact-value">@bribarealestate</span>
+            </div>
+            <div class="contact-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </a>
+        </div>
       </div>
-      <a href="https://wa.me/6285337835809" class="btn btn-large" target="_blank" rel="noopener">Chat with Us on WhatsApp</a>
     </div>
   </section>
 
+  </main>
+
   <!-- Footer -->
   <footer role="contentinfo">
-    <div class="container">
-      <div class="footer-logo-text" aria-label="PT Briba Real Estate">B</div>
-      <p>&copy; 2026 PT Briba Real Estate. All rights reserved.</p>
-      <a href="#hero" class="back-to-top">Back to top</a>
+    <div class="footer-content">
+      <div class="container">
+
+        <div class="footer-grid">
+          <!-- Brand Column -->
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <img src="images/cleanB.png" alt="Briba Real Estate Logo">
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#villas">Our Villas</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="footer-section">
+            <h4>Contact Us</h4>
+            <ul class="footer-contact">
+              <li>
+                <a href="https://wa.me/6285337835809" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                  </svg>
+                  +62 853 3783 5809
+                </a>
+              </li>
+              <li>
+                <a href="mailto:Bribarealestate@gmail.com" aria-label="Send email">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                  </svg>
+                  Bribarealestate@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/bribarealestate" target="_blank" rel="noopener" aria-label="Follow on Instagram">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <circle cx="12" cy="12" r="4"/>
+                  </svg>
+                  @bribarealestate
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Location -->
+          <div class="footer-section">
+            <h4>Location</h4>
+            <p class="footer-address">
+              Bali, Indonesia
+            </p>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="footer-divider"></div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+          <p>&copy; 2026 PT Briba Real Estate. All rights reserved.</p>
+          <a href="#hero" class="back-to-top" aria-label="Back to top of page">
+            Back to top
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 19V5M5 12l7-7 7 7"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
     </div>
   </footer>
 
