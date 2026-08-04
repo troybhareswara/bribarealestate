@@ -291,14 +291,15 @@ a {
   color: #ffffff;
 }
 
-/* Hamburger Menu */
+/* Hamburger Toggle */
 .nav-toggle {
   display: none;
   background: none;
   border: none;
   cursor: pointer;
   padding: var(--space-2);
-  z-index: 101;
+  position: relative;
+  z-index: 202;
 }
 
 .nav-toggle span {
@@ -308,29 +309,50 @@ a {
   background: var(--color-ink);
   margin: 6px 0;
   transition:
-    background var(--duration-fast) var(--ease-out),
-    transform var(--duration-base) var(--ease-out),
-    opacity var(--duration-base) var(--ease-out);
+    background-color var(--duration-fast) var(--ease-out),
+    transform var(--duration-base) var(--ease-out);
+}
+
+.nav-menu.active .nav-toggle span {
+  background: var(--color-surface);
 }
 
 /* Mobile Navigation Overlay */
 .nav-menu {
   position: fixed;
   top: 0;
-  right: -100%;
+  right: 0;
   width: 85%;
-  max-width: 360px;
+  max-width: 320px;
   height: 100vh;
   background: var(--color-ink);
   color: var(--color-surface);
-  transition: right var(--duration-slow) var(--ease-out);
+  transform: translateX(100%);
+  transition: transform var(--duration-slow) var(--ease-out);
   padding-top: var(--space-16);
   list-style: none;
   z-index: 200;
+  overflow-y: auto;
 }
 
 .nav-menu.active {
-  right: 0;
+  transform: translateX(0);
+}
+
+/* Mobile menu backdrop */
+.nav-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--duration-base) var(--ease-out), visibility var(--duration-base);
+  z-index: 199;
+}
+
+.nav-backdrop.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .nav-close {
@@ -360,9 +382,25 @@ a {
   font-weight: 300;
   letter-spacing: 0.02em;
   border-bottom: 1px solid var(--color-border-dark);
-  transition: background var(--duration-fast) var(--ease-out);
-  opacity: 0.9;
+  transition:
+    background var(--duration-fast) var(--ease-out),
+    opacity var(--duration-base) var(--ease-out),
+    transform var(--duration-base) var(--ease-out);
+  opacity: 0;
+  transform: translateX(20px);
 }
+
+.nav-menu.active a {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.nav-menu.active li:nth-child(2) a { transition-delay: 0.05s; }
+.nav-menu.active li:nth-child(3) a { transition-delay: 0.1s; }
+.nav-menu.active li:nth-child(4) a { transition-delay: 0.15s; }
+.nav-menu.active li:nth-child(5) a { transition-delay: 0.2s; }
+.nav-menu.active li:nth-child(6) a { transition-delay: 0.25s; }
+.nav-menu.active li:nth-child(7) a { transition-delay: 0.3s; }
 
 .nav-menu a:hover,
 .nav-menu a:focus {

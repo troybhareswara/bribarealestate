@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="PT Briba Real Estate offers three beautiful vintage villas for daily rental in Berawa, Bali. Family-owned for 20 years, renovated in 2024. Airport pickup, motorcycle rental, and more.">
-  <title>PT Briba Real Estate — Luxury Bali Villas | Berawa, Bali</title>
+  <title>Briba Real Estate — Bali Villas</title>
 
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23000'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='65' font-weight='700' fill='%23fff'>B</text></svg>">
@@ -21,6 +21,7 @@
   <!-- Navigation -->
   <nav id="navbar" role="navigation" aria-label="Main navigation">
     <a href="#hero" class="nav-logo-link" aria-label="PT Briba Real Estate - Home">
+      <span class="nav-logo-text"><img src="images/cleanB.png" alt="Briba Logo"></span>
       <span class="nav-logo-full">BRIBA REAL ESTATE</span>
     </a>
 
@@ -29,6 +30,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#villas">Villas</a></li>
       <li><a href="#services">Services</a></li>
+    <!--DONT INCLUDE NYANYI --> 
       <li><a href="#contact">Contact</a></li>
     </ul>
 
@@ -40,13 +42,24 @@
     </button>
 
     <!-- Mobile Navigation Menu -->
-    <ul id="mobile-menu" class="nav-menu" role="menu">
-      <li><button class="nav-close" aria-label="Close menu">&times;</button></li>
-      <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
-      <li role="none"><a href="#villas" class="nav-link" role="menuitem">Villas</a></li>
-      <li role="none"><a href="#services" class="nav-link" role="menuitem">Services</a></li>
-      <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+    <ul id="mobile-menu" class="nav-menu" role="menu" aria-hidden="true">
+      <li class="nav-menu-header">
+        <span class="nav-menu-logo">B BRIBA</span>
+        <button class="nav-close" aria-label="Close menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 6L6 18M6 6l12 12"/>
+          </svg>
+        </button>
+      </li>
+      <li><a href="#about" class="nav-link" role="menuitem">About</a></li>
+      <li><a href="#villas" class="nav-link" role="menuitem">Villas</a></li>
+      <li><a href="#services" class="nav-link" role="menuitem">Services</a></li>
+      <!--DONT INCLUDE NYANYI --> 
+      <li><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
     </ul>
+
+    <!-- Mobile Menu Backdrop -->
+    <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
   </nav>
 
   <!-- Hero -->
