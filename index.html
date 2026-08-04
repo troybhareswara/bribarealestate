@@ -44,7 +44,7 @@
   <section id="about">
     <div class="container">
       <h2>Our Story</h2>
-      <p>
+      <p class="fade-in">
         Founded by a mixed Indonesian family, PT Briba Real Estate has been managing three beautiful villas in Bali for over 20 years.
         Two years ago, we completed a full renovation to bring modern comfort while preserving the soul of Balinese architecture.
         Today, we welcome guests through daily rentals on Airbnb, with service and comfort as our absolute priority.
@@ -58,7 +58,7 @@
       <h2>Our Villas</h2>
       <div class="villas-grid">
 
-        <div class="villa-card">
+        <div class="villa-card fade-in">
           <div class="villa-placeholder">
             <span>Villa 1</span>
           </div>
@@ -67,7 +67,7 @@
           <a href="https://www.airbnb.com/rooms/1589485809328757219" class="btn" target="_blank" rel="noopener">View on Airbnb</a>
         </div>
 
-        <div class="villa-card">
+        <div class="villa-card fade-in">
           <div class="villa-placeholder">
             <span>Villa 2</span>
           </div>
@@ -76,7 +76,7 @@
           <a href="https://www.airbnb.com/rooms/1281611453844261890" class="btn" target="_blank" rel="noopener">View on Airbnb</a>
         </div>
 
-        <div class="villa-card">
+        <div class="villa-card fade-in">
           <div class="villa-placeholder">
             <span>Villa 3</span>
           </div>
@@ -95,7 +95,7 @@
       <h2>Guest Services</h2>
       <div class="services-grid">
 
-        <div class="service-item">
+        <div class="service-item fade-in">
           <!-- Plane icon: Airport Pickup -->
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
@@ -103,7 +103,7 @@
           <span>Airport Pickup</span>
         </div>
 
-        <div class="service-item">
+        <div class="service-item fade-in">
           <!-- Bike icon: Motorcycle Rental -->
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="5" cy="17" r="3"/>
@@ -114,7 +114,7 @@
           <span>Motorcycle Rental</span>
         </div>
 
-        <div class="service-item">
+        <div class="service-item fade-in">
           <!-- Gift icon: Birthday Decoration -->
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <rect x="3" y="8" width="18" height="4" rx="1"/>
@@ -125,7 +125,7 @@
           <span>Birthday Decoration</span>
         </div>
 
-        <div class="service-item">
+        <div class="service-item fade-in">
           <!-- Waves icon: Pool Decoration -->
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
@@ -135,7 +135,7 @@
           <span>Pool Decoration</span>
         </div>
 
-        <div class="service-item">
+        <div class="service-item fade-in">
           <!-- Crib icon: Baby Cot Available -->
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 18V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12"/>
@@ -147,7 +147,7 @@
           <span>Baby Cot Available</span>
         </div>
 
-        <div class="service-item">
+        <div class="service-item fade-in">
           <!-- Bed icon: Extra Beds -->
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M2 4v16"/>
@@ -165,7 +165,7 @@
   <!-- Nyanyi Teaser -->
   <section id="nyanyi">
     <div class="container nyanyi-container">
-      <div class="nyanyi-text">
+      <div class="nyanyi-text fade-in">
         <h2>Coming Soon — Nyanyi</h2>
         <p class="nyanyi-tagline">A New Chapter in Bali Living</p>
         <p>
@@ -189,7 +189,7 @@
   <section id="contact">
     <div class="container">
       <h2>Get in Touch</h2>
-      <div class="contact-grid">
+      <div class="contact-grid fade-in">
 
         <a href="https://wa.me/6285337835809" class="contact-item" target="_blank" rel="noopener">
           <!-- WhatsApp icon -->
@@ -238,30 +238,7 @@
     </div>
   </footer>
 
-  <!-- Hamburger / Overlay Menu Script -->
-  <script>
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    const navClose = document.querySelector('.nav-close');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    function openMenu() {
-      navMenu.classList.add('active');
-      navToggle.setAttribute('aria-expanded', 'true');
-    }
-
-    function closeMenu() {
-      navMenu.classList.remove('active');
-      navToggle.setAttribute('aria-expanded', 'false');
-    }
-
-    navToggle.addEventListener('click', openMenu);
-    navClose.addEventListener('click', closeMenu);
-
-    navLinks.forEach(function(link) {
-      link.addEventListener('click', closeMenu);
-    });
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
