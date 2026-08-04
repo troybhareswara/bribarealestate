@@ -116,22 +116,6 @@ a {
   color: inherit;
 }
 
-.navbar-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-}
-
-.navbar-links a {
-  color: inherit;
-  font-weight: 400;
-  transition: opacity 0.3s ease;
-}
-
-.navbar-links a:hover {
-  opacity: 0.7;
-}
-
 /* Hamburger Menu */
 .nav-toggle {
   display: none;
@@ -203,7 +187,7 @@ a {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+  background: transparent;
   color: #FFFFFF;
   padding: 2rem;
 }
@@ -321,20 +305,6 @@ section h2 {
 
 .service-item:hover svg {
   opacity: 0.6;
-}
-
-.service-name {
-  font-family: 'Lato', sans-serif;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #000000;
-  margin-bottom: 0.5rem;
-}
-
-.service-desc {
-  font-size: 0.9rem;
-  color: #666666;
 }
 
 /* -----------------------------------------
