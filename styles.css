@@ -2,7 +2,9 @@
    CSS Reset & Custom Properties
    =================================== */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -24,11 +26,16 @@
   --font-body: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Spacing - Mobile First */
-  --space-xs: 0.5rem;    /* 8px */
-  --space-sm: 1rem;       /* 16px */
-  --space-md: 1.5rem;     /* 24px */
-  --space-lg: 2rem;       /* 32px */
-  --space-xl: 3rem;       /* 48px */
+  --space-xs: 0.5rem;
+  /* 8px */
+  --space-sm: 1rem;
+  /* 16px */
+  --space-md: 1.5rem;
+  /* 24px */
+  --space-lg: 2rem;
+  /* 32px */
+  --space-xl: 3rem;
+  /* 48px */
   --section-padding: 60px;
   --container-max: 1200px;
   --container-padding: 1rem;
@@ -119,7 +126,10 @@ body.nav-open {
   overflow: hidden;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-heading);
   color: var(--color-gray-900);
   line-height: 1.2;
@@ -348,7 +358,7 @@ section {
   right: -100%;
   width: 100%;
   max-width: 320px;
-  height: 100vh;
+  height: 100dvh;
   background: var(--color-black);
   padding: 2rem;
   transition: right var(--transition-fast);
@@ -446,7 +456,7 @@ section {
 
 #hero {
   position: relative;
-  height: 100vh;
+  height: 100dvh;
   min-height: 600px;
   overflow: hidden;
 }
@@ -1334,13 +1344,11 @@ footer {
 /* Divider */
 .footer-divider {
   height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--color-gray-700) 20%,
-    var(--color-gray-700) 80%,
-    transparent
-  );
+  background: linear-gradient(to right,
+      transparent,
+      var(--color-gray-700) 20%,
+      var(--color-gray-700) 80%,
+      transparent);
   margin-bottom: 2rem;
 }
 
@@ -1445,27 +1453,64 @@ footer {
 }
 
 /* Stagger delays for grid items */
-.villas-grid .villa-card:nth-child(1) { transition-delay: 0ms; }
-.villas-grid .villa-card:nth-child(2) { transition-delay: 100ms; }
-.villas-grid .villa-card:nth-child(3) { transition-delay: 200ms; }
+.villas-grid .villa-card:nth-child(1) {
+  transition-delay: 0ms;
+}
 
-.services-grid .service-card:nth-child(1) { transition-delay: 0ms; }
-.services-grid .service-card:nth-child(2) { transition-delay: 50ms; }
-.services-grid .service-card:nth-child(3) { transition-delay: 100ms; }
-.services-grid .service-card:nth-child(4) { transition-delay: 150ms; }
-.services-grid .service-card:nth-child(5) { transition-delay: 200ms; }
-.services-grid .service-card:nth-child(6) { transition-delay: 250ms; }
-.services-grid .service-card:nth-child(7) { transition-delay: 300ms; }
+.villas-grid .villa-card:nth-child(2) {
+  transition-delay: 100ms;
+}
 
-.contact-grid .contact-item:nth-child(1) { transition-delay: 0ms; }
-.contact-grid .contact-item:nth-child(2) { transition-delay: 100ms; }
-.contact-grid .contact-item:nth-child(3) { transition-delay: 200ms; }
+.villas-grid .villa-card:nth-child(3) {
+  transition-delay: 200ms;
+}
+
+.services-grid .service-card:nth-child(1) {
+  transition-delay: 0ms;
+}
+
+.services-grid .service-card:nth-child(2) {
+  transition-delay: 50ms;
+}
+
+.services-grid .service-card:nth-child(3) {
+  transition-delay: 100ms;
+}
+
+.services-grid .service-card:nth-child(4) {
+  transition-delay: 150ms;
+}
+
+.services-grid .service-card:nth-child(5) {
+  transition-delay: 200ms;
+}
+
+.services-grid .service-card:nth-child(6) {
+  transition-delay: 250ms;
+}
+
+.services-grid .service-card:nth-child(7) {
+  transition-delay: 300ms;
+}
+
+.contact-grid .contact-item:nth-child(1) {
+  transition-delay: 0ms;
+}
+
+.contact-grid .contact-item:nth-child(2) {
+  transition-delay: 100ms;
+}
+
+.contact-grid .contact-item:nth-child(3) {
+  transition-delay: 200ms;
+}
 
 /* ===================================
    Reduced Motion - Accessibility
    =================================== */
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
