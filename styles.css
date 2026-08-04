@@ -468,16 +468,14 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
+  background-size: cover;        /* ⬅ tambahkan */
+  background-position: center;   /* ⬅ tambahkan */
+  background-repeat: no-repeat;
   will-change: transform;
   transform: translateZ(0);
   /* paksa GPU layer sendiri, isolasi dari reflow parent */
 }
 
-.hero-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 .hero-overlay {
   position: absolute;
