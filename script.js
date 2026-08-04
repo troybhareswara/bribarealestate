@@ -1,168 +1,145 @@
-// ============================================
-// PT Briba Real Estate - Interactions
-// ============================================
+/**
+ * Briba Real Estate - Landing Page JavaScript
+ * Mobile navigation, scroll animations, navbar effects
+ */
 
 (function() {
   'use strict';
 
-  // ----------------------------------------
-  // Elements
-  // ----------------------------------------
-  const navbar = document.getElementById('navbar');
+  // ===================================
+  // Mobile Navigation
+  // ===================================
+
   const navToggle = document.querySelector('.nav-toggle');
   const navMenu = document.getElementById('mobile-menu');
   const navBackdrop = document.getElementById('nav-backdrop');
   const navClose = document.querySelector('.nav-close');
-  const navLinks = document.querySelectorAll('.nav-link');
-  const hero = document.getElementById('hero');
+  const navLinks = document.querySelectorAll('.nav-menu .nav-link');
 
-  // ----------------------------------------
-  // State
-  // ----------------------------------------
-  let menuOpen = false;
-  let lastWidth = window.innerWidth;
-
-  // ----------------------------------------
-  // Hero-aware Navbar
-  // ----------------------------------------
-  function updateNavbar() {
-    if (menuOpen) return;
-
-    const heroBottom = hero.offsetTop + hero.offsetHeight;
-    const scrollY = window.scrollY;
-
-    if (scrollY < heroBottom * 0.5) {
-      navbar.classList.add('hero-mode');
-      navbar.classList.remove('scrolled');
-    } else {
-      navbar.classList.remove('hero-mode');
-      navbar.classList.add('scrolled');
-    }
-  }
-
-  // ----------------------------------------
-  // Mobile Navigation Toggle
-  // ----------------------------------------
-  function openMenu() {
-    menuOpen = true;
+  function openMobileNav() {
+    navToggle.classList.add('active');
     navMenu.classList.add('active');
     navBackdrop.classList.add('active');
+    document.body.classList.add('nav-open');
     navToggle.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
-    navbar.classList.remove('hero-mode');
-    navbar.classList.add('scrolled');
+    navMenu.setAttribute('aria-hidden', 'false');
   }
 
-  function closeMenu() {
-    menuOpen = false;
+  function closeMobileNav() {
+    navToggle.classList.remove('active');
     navMenu.classList.remove('active');
     navBackdrop.classList.remove('active');
+    document.body.classList.remove('nav-open');
     navToggle.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-    navToggle.focus();
-    updateNavbar();
+    navMenu.setAttribute('aria-hidden', 'true');
   }
 
+  // Toggle on hamburger click
   if (navToggle) {
     navToggle.addEventListener('click', function() {
-      if (menuOpen) {
-        closeMenu();
+      if (navMenu.classList.contains('active')) {
+        closeMobileNav();
       } else {
-        openMenu();
+        openMobileNav();
       }
     });
   }
 
-  if (navClose) {
-    navClose.addEventListener('click', closeMenu);
-  }
-
-  // Close menu when clicking backdrop
+  // Close on backdrop click
   if (navBackdrop) {
-    navBackdrop.addEventListener('click', closeMenu);
+    navBackdrop.addEventListener('click', closeMobileNav);
   }
 
-  // Close menu when clicking nav links
+  // Close on X button click
+  if (navClose) {
+    navClose.addEventListener('click', closeMobileNav);
+  }
+
+  // Close on link click
   navLinks.forEach(function(link) {
-    link.addEventListener('click', closeMenu);
+    link.addEventListener('click', closeMobileNav);
   });
 
-  // Close menu on Escape
+  // Close on escape key
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && menuOpen) {
-      closeMenu();
+    if (e.key === 'Escape' && navMenu && navMenu.classList.contains('active')) {
+      closeMobileNav();
     }
   });
 
-  // Close menu when resizing to desktop
-  window.addEventListener('resize', function() {
-    const currentWidth = window.innerWidth;
-    if (lastWidth <= 768 && currentWidth > 768) {
-      if (menuOpen) {
-        closeMenu();
+  // ===================================
+  // Navbar Scroll Effect
+  // ===================================
+
+  const navbar = document.getElementById('navbar');
+
+  if (navbar) {
+    let lastScrollY = 0;
+    const scrollThreshold = 50;
+
+    function handleNavbarScroll() {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > scrollThreshold) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
       }
+
+      lastScrollY = currentScrollY;
     }
-    lastWidth = currentWidth;
-  });
 
-  // ----------------------------------------
-  // Scroll Event
-  // ----------------------------------------
-  window.addEventListener('scroll', function() {
-    updateNavbar();
-  }, { passive: true });
+    // Throttle scroll handler for performance
+    let scrollTicking = false;
+    window.addEventListener('scroll', function() {
+      if (!scrollTicking) {
+        window.requestAnimationFrame(function() {
+          handleNavbarScroll();
+          scrollTicking = false;
+        });
+        scrollTicking = true;
+      }
+    });
 
-  // Initial check
-  updateNavbar();
+    // Check initial state
+    handleNavbarScroll();
+  }
 
-  // ----------------------------------------
-  // Scroll Animation (Intersection Observer)
-  // ----------------------------------------
+  // ===================================
+  // Scroll Reveal Animations
+  // ===================================
+
   const fadeElements = document.querySelectorAll('.fade-in');
 
-  if (fadeElements.length > 0 && 'IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      root: null,
-      rootMargin: '0px 0px -60px 0px',
-      threshold: 0.08
-    });
+  if (fadeElements.length > 0) {
+    // Check if Intersection Observer is supported
+    if ('IntersectionObserver' in window) {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -50px 0px',
+        threshold: 0.1
+      };
 
-    fadeElements.forEach(function(el) {
-      observer.observe(el);
-    });
-  } else {
-    fadeElements.forEach(function(el) {
-      el.classList.add('visible');
-    });
-  }
-
-  // ----------------------------------------
-  // Smooth Scroll for Anchor Links
-  // ----------------------------------------
-  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-    anchor.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href === '#' || href === '#hero') return;
-
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        const navbarHeight = navbar.offsetHeight;
-        const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight - 20;
-
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
+      const fadeObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            // Stop observing once animated
+            observer.unobserve(entry.target);
+          }
         });
-      }
-    });
-  });
+      }, observerOptions);
+
+      fadeElements.forEach(function(el) {
+        fadeObserver.observe(el);
+      });
+
+    } else {
+      // Fallback: just show all elements immediately
+      fadeElements.forEach(function(el) {
+        el.classList.add('visible');
+      });
+    }
+  }
 
 })();
