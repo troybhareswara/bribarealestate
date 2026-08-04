@@ -474,7 +474,7 @@ footer {
 }
 
 /* -----------------------------------------
-   15. Responsive - Tablet (max-width: 768px)
+   14. Responsive - Tablet (max-width: 768px)
    ----------------------------------------- */
 @media (max-width: 768px) {
   .nav-toggle {
@@ -498,7 +498,7 @@ footer {
   }
 
   .villas-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .services-grid {
@@ -524,6 +524,10 @@ footer {
    ----------------------------------------- */
 @media (max-width: 480px) {
   .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .villas-grid {
     grid-template-columns: 1fr;
   }
 
@@ -578,14 +582,8 @@ footer {
 }
 
 /* -----------------------------------------
-   14. Responsive - Desktop (max-width: 1024px)
+   15. Responsive - Desktop (max-width: 1024px)
    ----------------------------------------- */
 @media (max-width: 1024px) {
-  .villas-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  /* Desktop breakpoint - no grid changes needed, handled by smaller breakpoints */
 }
