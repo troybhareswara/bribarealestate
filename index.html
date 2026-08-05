@@ -702,6 +702,32 @@ section {
   line-height: 1.6;
 }
 
+/* Villa Buttons Container */
+.villa-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .villa-buttons {
+    flex-direction: row;
+  }
+}
+
+/* WhatsApp Button - Black Style */
+.btn-whatsapp {
+  background-color: #000;
+  border-color: #000;
+  color: white;
+}
+
+.btn-whatsapp:hover {
+  background-color: #333;
+  border-color: #333;
+  color: white;
+}
+
 @media (min-width: 640px) {
   .villas-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1709,7 +1735,10 @@ footer {
           <div class="villa-card-content">
             <h3>Villa Vintage Berawa I</h3>
             <p>A charming blend of vintage elegance and modern comfort. Steps away from Berawa Beach, perfect for couples or small families seeking an authentic Bali experience.</p>
-            <a href="https://www.airbnb.com/rooms/1589485809328757219" class="btn" target="_blank" rel="noopener">View on Airbnb</a>
+            <div class="villa-buttons">
+              <a href="https://www.airbnb.com/rooms/1589485809328757219" class="btn" target="_blank" rel="noopener">View on Airbnb</a>
+              <a href="https://wa.me/6285337835809?text=Hi%20Briba%20Real%20Estate!%20%0A%0AI%27m%20interested%20in%20booking%20*Villa%20Vintage%20Berawa%20I*.%0A%0ACould%20you%20please%20check%20availability%20and%20pricing%20for%20my%20dates%3F%0A%0AThank%20you!" class="btn btn-whatsapp" target="_blank" rel="noopener">Book Now</a>
+            </div>
           </div>
         </article>
 
@@ -1726,7 +1755,10 @@ footer {
           <div class="villa-card-content">
             <h3>Villa Vintage Berawa II</h3>
             <p>Spacious and serene, surrounded by lush tropical gardens. Ideal for families or groups who want room to breathe, relax, and create lasting memories together.</p>
-            <a href="https://www.airbnb.com/rooms/1281611453844261890" class="btn" target="_blank" rel="noopener">View on Airbnb</a>
+            <div class="villa-buttons">
+              <a href="https://www.airbnb.com/rooms/1281611453844261890" class="btn" target="_blank" rel="noopener">View on Airbnb</a>
+              <a href="https://wa.me/6285337835809?text=Hi%20Briba%20Real%20Estate!%20%0A%0AI%27m%20interested%20in%20booking%20*Villa%20Vintage%20Berawa%20II*.%0A%0ACould%20you%20please%20check%20availability%20and%20pricing%20for%20my%20dates%3F%0A%0AThank%20you!" class="btn btn-whatsapp" target="_blank" rel="noopener">Book Now</a>
+            </div>
           </div>
         </article>
 
@@ -1743,7 +1775,10 @@ footer {
           <div class="villa-card-content">
             <h3>Villa Vintage Berawa III</h3>
             <p>Our intimate sanctuary featuring a private pool and authentic Balinese design throughout. The perfect retreat for those seeking privacy and tranquility.</p>
-            <a href="https://www.airbnb.com/rooms/1346703468716424163" class="btn" target="_blank" rel="noopener">View on Airbnb</a>
+            <div class="villa-buttons">
+              <a href="https://www.airbnb.com/rooms/1346703468716424163" class="btn" target="_blank" rel="noopener">View on Airbnb</a>
+              <a href="https://wa.me/6285337835809?text=Hi%20Briba%20Real%20Estate!%20%0A%0AI%27m%20interested%20in%20booking%20*Villa%20Vintage%20Berawa%20III*.%0A%0ACould%20you%20please%20check%20availability%20and%20pricing%20for%20my%20dates%3F%0A%0AThank%20you!" class="btn btn-whatsapp" target="_blank" rel="noopener">Book Now</a>
+            </div>
           </div>
         </article>
 
