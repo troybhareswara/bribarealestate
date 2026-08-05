@@ -473,10 +473,19 @@ section {
 #hero {
   position: relative;
   height: 100vh;
-  height: 100dvh;
   min-height: 600px;
+  max-height: 900px;
   overflow: hidden;
   padding-top: 70px;
+}
+
+/* Mobile: fixed height to prevent reflow during scroll */
+@media (max-width: 768px) {
+  #hero {
+    height: 700px;
+    min-height: 700px;
+    max-height: 700px;
+  }
 }
 
 .hero-bg {
@@ -488,9 +497,8 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* No background-attachment: fixed - causes scroll jank on mobile */
+  background-color: #000;
 }
-
 
 .hero-overlay {
   position: absolute;
