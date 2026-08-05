@@ -74,35 +74,14 @@
   const navbar = document.getElementById('navbar');
 
   if (navbar) {
-    let lastScrollY = 0;
-    const scrollThreshold = 50;
-
-    function handleNavbarScroll() {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > scrollThreshold) {
+    // Simple scroll handler
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
       }
-
-      lastScrollY = currentScrollY;
-    }
-
-    // Throttle scroll handler for performance
-    let scrollTicking = false;
-    window.addEventListener('scroll', function() {
-      if (!scrollTicking) {
-        window.requestAnimationFrame(function() {
-          handleNavbarScroll();
-          scrollTicking = false;
-        });
-        scrollTicking = true;
-      }
-    });
-
-    // Check initial state
-    handleNavbarScroll();
+    }, { passive: true });
   }
 
   // ===================================
@@ -112,34 +91,16 @@
   const fadeElements = document.querySelectorAll('.fade-in');
 
   if (fadeElements.length > 0) {
-    // Check if Intersection Observer is supported
-    if ('IntersectionObserver' in window) {
-      const observerOptions = {
-        root: null,
-        rootMargin: '0px 0px -50px 0px',
-        threshold: 0.1
-      };
-
-      const fadeObserver = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            // Stop observing once animated
-            observer.unobserve(entry.target);
-          }
-        });
-      }, observerOptions);
-
-      fadeElements.forEach(function(el) {
-        fadeObserver.observe(el);
+    // Simple IntersectionObserver - like eliteoperates.com
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
       });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-    } else {
-      // Fallback: just show all elements immediately
-      fadeElements.forEach(function(el) {
-        el.classList.add('visible');
-      });
-    }
+    fadeElements.forEach(el => revealObserver.observe(el));
   }
 
 })();
